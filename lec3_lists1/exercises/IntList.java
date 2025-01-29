@@ -1,4 +1,4 @@
-package lec3_intro3.exercises;
+package lec3_lists1.exercises;
 
 public class IntList {
     public int first;
