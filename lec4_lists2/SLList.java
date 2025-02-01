@@ -16,12 +16,6 @@ public class SLList {
     private IntNode sentinel;
     private int size;
 
-    public SLList(int x) {
-        sentinel = new IntNode(12873, null);
-        sentinel.next = new IntNode(x, null);
-        size = 1;
-    }
-
     public SLList() {
         size = 0;
         sentinel = new IntNode(12873, null);
