@@ -19,8 +19,8 @@ public class ExtraIntListPractice {
 
     public static void main(String[] args) {
         IntList L = new IntList(5, null);
-        L.tail = new IntList(7, null);
-        L.tail.tail = new IntList(9, null);
+        L.rest = new IntList(7, null);
+        L.rest.rest = new IntList(9, null);
 
         System.out.println(L.size());
         System.out.println(L.iterativeSize());
