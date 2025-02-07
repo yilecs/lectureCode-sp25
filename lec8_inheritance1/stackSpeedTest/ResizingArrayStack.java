@@ -3,7 +3,7 @@ package lec8_inheritance1.stackSpeedTest;
 import java.util.EmptyStackException;
 
 public class ResizingArrayStack<E> implements Stack<E> {
-    private static final int INITIAL_CAPACITY = 1000000;
+    private static final int INITIAL_CAPACITY = 100;
     private E[] arr;
     private int size;
 
