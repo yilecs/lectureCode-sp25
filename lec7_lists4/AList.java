@@ -1,20 +1,30 @@
 package lec7_lists4;
 
-public class AList {
+public class AList<Glorp> {
+    private Glorp[] items;
     private int size;
-    private int[] items;
 
     public AList() {
         size = 0;
-        items = new int[100];
+        items = (Glorp[]) new Object[100];
+    }
+    // 0, 0, 0, 0, 0, 0, 0, ...
+    // 3, 0, 0, 0, 0, 0, 0,
+    // 3, 7, 0, 0, 0, 0, 0,
+    //       ^ size = 2
+    //
+    // Observation: Next new item will go in position size
+    //              The last item is in position size - 1
+    //              Size is the number of items.
+
+    // resize the underlying array to the desired capacity
+    private void resize(int capacity) {
+        Glorp[] a = (Glorp[]) new Object[capacity];
+        System.arraycopy(items, 0, a, 0, size);
+        items = a;
     }
 
-    // [3, 4, 2, 0, 0, 0, ....]
-    //           ^ (size = 3)
-    // size is the location of the next add
-    // size - 1 location of the last item
-
-    public void addLast(int x) {
+    public void addLast(Glorp x) {
         if (size == items.length) {
             resize(size + 1);
         }
@@ -22,22 +32,19 @@ public class AList {
         size += 1;
     }
 
-    private void resize(int newSize) {
-        int[] a = new int[newSize + 1];
-        System.arraycopy(items, 0, a, 0, size);
-        items = a;
-    }
-
-    public int getLast() {
+    public Glorp getLast() {
         return items[size - 1];
     }
 
-    public int get(int i) {
+    public Glorp get(int i) {
+        if (i >= size) {
+            throw new IllegalArgumentException("We don't have that much stuff");
+        }
         return items[i];
     }
 
-    public int removeLast() {
-        int itemToReturn = getLast();
+    public Glorp removeLast() {
+        Glorp itemToReturn = getLast();
         size -= 1;
         return itemToReturn;
     }

@@ -11,7 +11,7 @@ import static com.google.common.truth.Truth.assertThat;
 public class AListTest {
     @Test
     public void testAddAndGet() {
-        AList list = new AList();
+        AList<Integer> list = new AList<>();
         list.addLast(5);
         list.addLast(10);
 
@@ -22,7 +22,7 @@ public class AListTest {
 
     @Test
     public void testGetLast() {
-        AList list = new AList();
+        AList<Integer> list = new AList<>();
         list.addLast(7);
         list.addLast(14);
         list.addLast(21);
@@ -33,7 +33,7 @@ public class AListTest {
 
     @Test
     public void testRemoveLast() {
-        AList list = new AList();
+        AList<Integer> list = new AList<>();
         list.addLast(3);
         list.addLast(6);
         list.addLast(9);
@@ -50,9 +50,9 @@ public class AListTest {
         assertThat(list.removeLast()).isEqualTo(3);
     }
 
-    /*@Test
+    @Test
     public void add200Items() {
-        lec7_lists4.resizeExercise.AList list = new lec7_lists4.resizeExercise.AList();
+        AList<Integer> list = new AList<>();
         for (int i = 0; i < 200; i += 1) {
             list.addLast(i);
         }
@@ -60,5 +60,5 @@ public class AListTest {
         for (int i = 0; i < 200; i += 1) {
             assertThat(list.get(i)).isEqualTo(i);
         }
-    }*/
+    }
 }
