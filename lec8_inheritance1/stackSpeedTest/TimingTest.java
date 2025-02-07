@@ -2,7 +2,7 @@ package lec8_inheritance1.stackSpeedTest;
 
 public class TimingTest {
     // Adjust these if you're running out of memory or time
-    private static final int NUM_ITERATIONS = 300;     // How many times to create and fill a new stack
+    private static final int NUM_ITERATIONS = 1000;     // How many times to create and fill a new stack
     private static final int ITEMS_PER_STACK = 1_000_000; // How many items to push onto each stack
 
     public static void main(String[] args) {
