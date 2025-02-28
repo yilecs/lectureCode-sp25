@@ -1,4 +1,4 @@
-package lec9_inheritance2.doneCode;
+package lec9_inheritance2;
 
 public class RandomPickerDemo {
     public static void main(String[] args) {

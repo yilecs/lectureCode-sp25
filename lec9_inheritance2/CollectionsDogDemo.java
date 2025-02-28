@@ -1,8 +1,7 @@
-package lec9_inheritance2.doneCode;
+package lec9_inheritance2;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 public class CollectionsDogDemo {

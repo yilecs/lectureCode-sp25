@@ -1,4 +1,4 @@
-package lec9_inheritance2.doneCode;
+package lec9_inheritance2;
 
 public class Maximizer {
     public static <T extends Comparable<? super T>> T max(T[] items) {

@@ -1,4 +1,4 @@
-package lec9_inheritance2.doneCode;
+package lec9_inheritance2;
 
 import java.util.Random;
 
