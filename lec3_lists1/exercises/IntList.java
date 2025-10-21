@@ -26,7 +26,12 @@ public class IntList {
         return totalSize;
     }
 
-    // TODO: Add a get method
+    public int get(int i) {
+        if (i == 0) {
+            return first;
+        }
+        return rest.get(i - 1);
+    }
 
     public static void main(String[] args) {
         IntList L = new IntList(15, null);
@@ -34,6 +39,6 @@ public class IntList {
         L = new IntList(5, L);
 
         // write get and uncomment
-        //System.out.println(L.get(5));
+        System.out.println(L.get(2));
     }
 }
