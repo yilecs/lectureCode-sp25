@@ -36,6 +36,11 @@ public class SLList {
     public void addLast(int x) {
         IntNode p = first;
 
+        if (p == null) {
+            addFirst(x);
+            return;
+        }
+
         // set p to be the last node in the list
         while (p.next != null) {
             p = p.next;
@@ -48,8 +53,4 @@ public class SLList {
     public int size() {
         return size;
     }
-
-
-
-    // TODO: Add an addLast and size method
 }
